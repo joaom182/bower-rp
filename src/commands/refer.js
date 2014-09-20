@@ -1,13 +1,15 @@
 var cli = require('../cli');
+var fs = require('fs');
 
 var refer = function () {
-	cli.log.info('Package name - ' + cli.argv._[1]);
-	cli.log.info('File name - ' + cli.argv._[2]);
+	var packageName = cli.argv._[1];
+	var filePath = cli.argv._[2];
+	
+	var file = fs.readFileSync(filePath).toString();
 };
 
 refer.usage = [
-'The ' + '`brp refer`'.magenta + ' command refer the main files of bower package,',
-'into your html file',
+'The ' + '`brp refer`'.magenta + ' command refer the main files of bower package, into your html file.',
 '',
 'Usage:'.magenta.bold.underline,
 '',
