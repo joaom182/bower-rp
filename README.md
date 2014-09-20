@@ -1,2 +1,2 @@
-CLI to reference installed bower packages on HTML
+CLI to reference bower packages on HTML
 ==============
