@@ -1,0 +1,22 @@
+{
+  "description": "test",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "colors": "^0.6.2",
+    "flatiron": "0.4.2",
+    "flatiron-cli-config": "^0.1.4",
+    "pkginfo": "^0.3.0"
+  },
+  "devDependencies": {
+    "cli-easy": "0.1.0",
+    "vows": "0.6.1"
+  },
+  "scripts": {
+    "test": "vows --spec",
+    "start": "node app.js"
+  },
+  "name": "cli-app",
+  "author": "João M.",
+  "homepage": ""
+}
