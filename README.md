@@ -7,7 +7,7 @@ npm install bower-rp -g
 ```
 
 ##Usage
-Open your root project directory that contains bower_components folder and type:
+Open root project directory that contains bower_components folder and type:
 ```
 bower-rp ref <package_name> <your_file.html>
 ```
