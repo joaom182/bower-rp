@@ -1,4 +1,4 @@
-#bower-rp
+#bower-rp - Referrer Bower Packages
 
 ##CLI to reference bower packages on HTML
 
