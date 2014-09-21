@@ -3,7 +3,6 @@ var colors = require('colors');
 module.exports = [
 'Simple tool for reference bower packages to html files.',
 'https://github.com/joaom182/bower-rp',
-'author: João M. <joaom182@hotmail.com>',
 '',
 
 'Usage:'.cyan.bold.underline,
