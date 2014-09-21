@@ -19,4 +19,4 @@ bower-rp ref bootstrap index.html
 ```
 
 ###Features
-The Referrer Bower Packages solves the package dependencies, for example, the Bootstrap package has dependency on jQuery, then bower-ref will include the jQuery library before Bootstrap in your HTML file.
+The Referrer Bower Packages solves the package dependencies, for example, the `bootstrap.js` package has dependency on `jquery.js`, then bower-ref will include automatically the `jquery.js` before `bootstrap.js` and `bootstrap.css` in your HTML file.
