@@ -19,5 +19,26 @@
   },
   "name": "bower-rp",
   "author": "João M.",
-  "homepage": "https://github.com/joaom182/bower-rp"
+  "homepage": "https://github.com/joaom182/bower-rp",
+  "main": "src/cli.js",
+  "bin": {
+    "bower-rp": "bin/brp.js"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joaom182/bower-rp.git"
+  },
+  "keywords": [
+  "bower",
+  "package",
+  "referencer",
+  "lightweight"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joaom182/bower-rp/issues"
+  }
 }
