@@ -9,11 +9,7 @@ app.use(flatiron.plugins.cli, {
 	usage: require('./common/usage.js'),
 	source: path.join(__dirname, 'commands'),
 	argv: {
-		version: {
-			alias: 'v',
-			description: 'print version of app',
-			string: true
-		}
+		
 	}
 });
 

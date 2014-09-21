@@ -1,7 +1,9 @@
 (function(){
 
 	var cli = require('../cli');
+	var colors = require('colors');
 	var fs = require('fs');
+	var path = require('path');
 	require("linqjs");
 
 	function _getFilesByType(filePathList, type){
@@ -90,40 +92,40 @@
 	}
 
 	function _writeHtmlFile(html, path){
-		try{
-			fs.writeFileSync(path, html, 'utf8');
-		}catch(err){
-			throw err;
-		}
+		fs.writeFileSync(path, html, 'utf8');
 	}
 
-	var refer = function () {
-		var packageName = cli.argv._[1];
-		var viewPath = cli.argv._[2];
-		var html = fs.readFileSync(viewPath).toString();
-		var cssFilesToImport = [];
-		var jsFilesToImport = [];
+	var ref = function () {
+		try{
+			var packageName = cli.argv._[1];
+			var viewPath = cli.argv._[2];
+			var html = fs.readFileSync(viewPath).toString();
+			var cssFilesToImport = [];
+			var jsFilesToImport = [];
 
-		cli.log.info('Referencing package ' + packageName + ' to file ' + viewPath);
+			cli.log.info('Referencing package ' + packageName + ' to file ' + viewPath);
 
-		_getFilesToImportByPackageName(packageName, cssFilesToImport, jsFilesToImport);
-		html = _importCssToHtml(html, cssFilesToImport);
-		html = _importJsToHtml(html, jsFilesToImport);
+			_getFilesToImportByPackageName(packageName, cssFilesToImport, jsFilesToImport);
+			html = _importCssToHtml(html, cssFilesToImport);
+			html = _importJsToHtml(html, jsFilesToImport);
 
-		_writeHtmlFile(html, viewPath);
+			_writeHtmlFile(html, viewPath);
 
-		cli.log.info('Voilà, done! :)');
+			cli.log.info('Voilà, done! :)');
+		}catch(err){
+			cli.log.info(err);
+		}
 	};
 
-	refer.usage = [
-	'The ' + '`bower-rp refer`'.magenta + ' command refer the main files of bower package, into your html file.',
+	ref.usage = [
+	'The ' + '`bower-rp ref`'.magenta + ' command ref the main files of bower package, into your html file.',
 	'',
 	'Usage:'.magenta.bold.underline,
 	'',
-	'bower-rp refer bootstrap index.html'
+	'bower-rp ref bootstrap index.html'
 	];
 
-	module.exports = refer;
+	module.exports = ref;
 
 })();
 

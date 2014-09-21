@@ -1,6 +1,6 @@
 {
   "description": "Bower reference package tool",
-  "version": "0.0.4",
+  "version": "0.0.7",
   "private": false,
   "dependencies": {
     "colors": "^0.6.2",
