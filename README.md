@@ -15,7 +15,7 @@ bower-rp ref <package_name> <your_file.html>
 
 ###Example
 ```
-bower-rp bootstrap index.html
+bower-rp ref bootstrap index.html
 ```
 
 ###Features
