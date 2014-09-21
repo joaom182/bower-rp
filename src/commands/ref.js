@@ -16,10 +16,10 @@
 		mainFiles = typeof(mainFiles) == "object" ? mainFiles : [mainFiles];
 
 		_getFilesByType(mainFiles, ".css").forEach(function(f){
-			cssFilesToImport.unshift(packageName + '/' + f);
+			cssFilesToImport.unshift(packageName + '/' + f.replace("../", "").replace("./", ""));
 		});
 		_getFilesByType(mainFiles, ".js").forEach(function(f){
-			jsFilesToImport.unshift(packageName + '/' + f);
+			jsFilesToImport.unshift(packageName + '/' + f.replace("../", "").replace("./", ""));
 		});
 	}
 
