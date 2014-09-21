@@ -17,8 +17,6 @@ app.use(flatiron.plugins.cli, {
 	}
 });
 
-app.use(require('flatiron-cli-config'));
-
 app.start = function (callback) {
 	app.argv.colors || (colors.mode = 'none');
 
