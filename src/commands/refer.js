@@ -104,19 +104,23 @@
 		var cssFilesToImport = [];
 		var jsFilesToImport = [];
 
+		cli.log.info('Referencing package ' + packageName + ' to file ' + viewPath);
+
 		_getFilesToImportByPackageName(packageName, cssFilesToImport, jsFilesToImport);
 		html = _importCssToHtml(html, cssFilesToImport);
 		html = _importJsToHtml(html, jsFilesToImport);
 
 		_writeHtmlFile(html, viewPath);
+
+		cli.log.info('Voilà, done! :)');
 	};
 
 	refer.usage = [
-	'The ' + '`brp refer`'.magenta + ' command refer the main files of bower package, into your html file.',
+	'The ' + '`bower-rp refer`'.magenta + ' command refer the main files of bower package, into your html file.',
 	'',
 	'Usage:'.magenta.bold.underline,
 	'',
-	'brp refer bootstrap index.html'
+	'bower-rp refer bootstrap index.html'
 	];
 
 	module.exports = refer;
