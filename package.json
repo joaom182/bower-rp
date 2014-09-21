@@ -4,7 +4,7 @@
   "private": false,
   "dependencies": {
     "colors": "^0.6.2",
-    "flatiron": "0.4.2",
+    "flatiron": "~0.4.2",
     "flatiron-cli-config": "^0.1.4",
     "linqjs": "0.0.1",
     "pkginfo": "^0.3.0"
