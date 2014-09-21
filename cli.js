@@ -13,5 +13,3 @@ app.use(flatiron.plugins.cli, {
 		},
 	}
 });
-
-app.use(require('flatiron-cli-config'));
