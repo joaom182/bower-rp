@@ -1,11 +1,12 @@
 {
-  "description": "test",
-  "version": "0.0.0",
-  "private": true,
+  "description": "Bower reference package tool",
+  "version": "0.0.1",
+  "private": false,
   "dependencies": {
     "colors": "^0.6.2",
     "flatiron": "0.4.2",
     "flatiron-cli-config": "^0.1.4",
+    "linqjs": "0.0.1",
     "pkginfo": "^0.3.0"
   },
   "devDependencies": {
@@ -14,9 +15,9 @@
   },
   "scripts": {
     "test": "vows --spec",
-    "start": "node app.js"
+    "start": "node ./bin/brp.js"
   },
-  "name": "cli-app",
+  "name": "bower-rp",
   "author": "João M.",
-  "homepage": ""
+  "homepage": "https://github.com/joaom182/bower-rp"
 }
