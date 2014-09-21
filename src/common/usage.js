@@ -10,7 +10,7 @@ module.exports = [
 '',
 
 'To reference a bower package to a file'.cyan,
-' bower-rp ref <package_name> <your_file.html>',
-' ex: bower-rp ref bootstrap index.html'.lightgray,
+' bower-rp ref <package_name> <your_file.html>'.magenta,
+' ex: bower-rp ref bootstrap index.html',
 '',
 ];
