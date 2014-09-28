@@ -1,6 +1,6 @@
 {
   "description": "Bower reference package tool",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "private": false,
   "dependencies": {
     "colors": "^0.6.2",
@@ -14,14 +14,14 @@
   },
   "scripts": {
     "test": "vows --spec",
-    "start": "node ./bin/brp.js"
+    "start": "node ./bin/bower-rp"
   },
   "name": "bower-rp",
   "author": "João M.",
   "homepage": "https://github.com/joaom182/bower-rp",
   "main": "src/cli.js",
   "bin": {
-    "bower-rp": "bin/brp.js"
+    "bower-rp": "bin/bower-rp"
   },
   "directories": {
     "test": "test"
