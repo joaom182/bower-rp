@@ -1,15 +1,15 @@
 var colors = require('colors');
 
 module.exports = [
-'Simple tool for reference bower packages to html files.',
+'Simple tool for reference main files of bower package to HTML.',
 'https://github.com/joaom182/bower-rp',
 '',
 
-'Usage:'.cyan.bold.underline,
+'Usage:'.cyan.bold,
 '',
 
-'To reference a bower package to a file'.cyan,
-' bower-rp ref <package_name> <your_file.html>'.magenta,
-' ex: bower-rp ref bootstrap index.html',
+'To reference main files of a bower package to HTML',
+' bower-rp reference <package_name> <your_file.html>'.cyan.bold,
+' ex: bower-rp reference bootstrap index.html',
 '',
 ];

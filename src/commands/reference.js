@@ -1,7 +1,6 @@
 (function(){
 
 	var cli = require('../cli');
-	var colors = require('colors');
 	var fs = require('fs');
 	var path = require('path');
 	require("linqjs");
@@ -45,13 +44,13 @@
 		_getFilesDependenciesToImport(bowerfile, cssFilesToImport, jsFilesToImport);
 	}
 
-	function _getJsScriptTemplate(pos, file, insertTab){
+	function _getJsScriptTemplate(pos, file, withSpaces){
 		var _template = '<script type="text/javascript" src="bower_components/' + file + '"></script>';
 
 		return "	" + _template;
 	}
 
-	function _importJsToHtml(html, jsFiles, insertTab){
+	function _importJsToHtml(html, jsFiles){
 		if(!html)
 			return;
 
@@ -62,13 +61,13 @@
 				continue;
 
 			var file = jsFiles[pos];
-			_html = _html.replace('</body>', _getJsScriptTemplate(pos, file, insertTab) + '\n</body>');
+			_html = _html.replace('</body>', _getJsScriptTemplate(pos, file, true) + '\n</body>');
 		}
 
 		return _html;
 	}
 
-	function _getCssScriptTemplate(pos, file){
+	function _getCssScriptTemplate(pos, file, withSpaces){
 		var _template = '<link rel="stylesheet" type="text/css" href="bower_components/' + file + '" />';
 
 		return "	" + _template;
@@ -95,7 +94,7 @@
 		fs.writeFileSync(path, html, 'utf8');
 	}
 
-	var ref = function () {
+	var reference = function () {
 		try{
 			var packageName = cli.argv._[1];
 			var viewPath = cli.argv._[2];
@@ -117,15 +116,15 @@
 		}
 	};
 
-	ref.usage = [
-	'The ' + '`bower-rp ref`'.magenta + ' command ref the main files of bower package, into your html file.',
+	reference.usage = [
+	'The ' + '`bower-rp reference` command reference the main files of bower package, into your html file.',
 	'',
-	'Usage:'.magenta.bold.underline,
+	'Usage:',
 	'',
-	'bower-rp ref bootstrap index.html'
+	'bower-rp reference bootstrap index.html'
 	];
 
-	module.exports = ref;
+	module.exports = reference;
 
 })();
 
